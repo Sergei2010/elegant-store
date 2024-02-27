@@ -1,0 +1,89 @@
+.hero {
+  height: 820px;
+  background-color: #ffc95c;
+  background-image: url('./../img/hero/bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include mediaBg() {
+    background-image: url('./../img/hero/bg@2x.jpg');
+  }
+
+  @include tablet {
+    height: 500px;
+  }
+
+  @include mobile {
+    height: auto;
+    padding-bottom: 390px;
+
+    background-image: url('./../img/hero/bg-mobile.jpg');
+
+    @include mediaBg() {
+      background-image: url('./../img/hero/bg-mobile@2x.jpg');
+    }
+  }
+
+  &__container {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: calc((100% - var(--container-width)) / 2 + (var(--container-width) / 2));
+    padding-right: calc((100% - var(--container-width)) / 2);
+
+    @include tablet {
+      padding-right: var(--container-padding);
+    }
+
+    @include mobile {
+      padding: 40px var(--container-padding);
+      margin: 0 auto;
+      max-width: 375px;
+      height: auto;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    color: #fff;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-family: var(--font-accent);
+    font-size: 80px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: #121212;
+
+    @include tablet {
+      font-size: 60px;
+    }
+
+    @include mobile {
+      font-size: 40px;
+    }
+
+    span {
+      color: var(--blue);
+    }
+  }
+
+  &__desc {
+    margin-bottom: 28px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #121212;
+
+    @include mobile {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+  }
+}
