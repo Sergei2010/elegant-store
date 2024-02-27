@@ -1,0 +1,14 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Poppins:wght@400;500;600&family=Space+Grotesk:wght@300..700&display=swap'); */
+
+/* Base */
+@import './base/reset';
+@import './base/vars';
+@import './base/mixins';
+/* @import './base/fonts'; */
+@import './base/base';
+@import './base/utils';
+@import './base/containers';
+@import './base/sticky-footer';
+
+/* Blocks */
+@import './blocks/*.scss';
